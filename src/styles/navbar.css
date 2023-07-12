@@ -2,6 +2,11 @@
     color: #f4e6cc;
     z-index: 9;
     background: hsla(23, 39%, 9%, 1);
+    /* background: linear-gradient(to right,
+            hsla(23, 39%, 9%, 1) 50%,
+            hsla(23, 39%, 9%, 1) 0%,
+            orange 50%,
+            orange 50%); */
 }
 
 
