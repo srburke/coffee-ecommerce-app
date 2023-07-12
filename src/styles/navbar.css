@@ -1,0 +1,61 @@
+.navbar {
+    color: #f4e6cc;
+    z-index: 9;
+    background: hsla(23, 39%, 9%, 1);
+}
+
+
+.navbar-brand {
+    font-family: 'Lilita One';
+    color: #f4e6cc !important;
+    font-size: 2.5rem;
+}
+
+.nav-item {
+    font-family: 'Heebo';
+    margin-right: 10px;
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f4e6cc;
+    font-size: 1.1rem
+}
+
+#link,
+#link:hover,
+#link:focus,
+#link:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+span a,
+span a:hover,
+span a:focus,
+span a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+#accountModal {
+    position: absolute;
+    left: 43%;
+
+}
+
+#account-content {
+    height: calc(100vh - 20px);
+    max-width: 340px;
+    width: 100%;
+    display: block;
+    background: #f6f6f6;
+}
+
+#cart-content {
+    width: 100%;
+    display: block;
+    /* background: #f6f6f6; */
+}

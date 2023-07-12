@@ -1,0 +1,21 @@
+.closeBtn {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sign-out {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    padding: 5px 0;
+    background: #0d6efd;
+    border-radius: 15px;
+    color: #ffffff;
+}
