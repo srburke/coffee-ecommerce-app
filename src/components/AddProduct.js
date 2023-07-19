@@ -48,35 +48,6 @@ const AddProduct = () => {
             }).catch(err => setError(err.message));
     }
 
-    // uploadTask.on('state_change', snapshot => {
-    //     const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    //     console.log(progress);
-    // }, err => {
-    //     setError(err.message);
-    // }, () => {
-    //     ref('product-images').child(productImg.name).getDownloadURL().then(url => {
-    //         db.collection('Product').add({
-    //             companyName: companyName,
-    //             productName: productName,
-    //             beanType: beanType,
-    //             roastLevel: roastLevel,
-    //             productDesc: productDesc,
-    //             productPrice: Number(productPrice),
-    //             productImg: url
-    //         }).then(() => {
-    //             setCompanyName('');
-    //             setProductName('');
-    //             setBeanType('');
-    //             setRoastLevel('');
-    //             setProductDesc('');
-    //             setProductPrice(0);
-    //             setProductImg('');
-    //             setError('');
-    //             document.getElementById('file').value = '';
-    //         }).catch(err => setError(err.message));
-    //     })
-    // })
-
     return (
         <div className='container'>
             <div className='container-fluid' style={{ backgroundColor: "white", borderRadius: "10px", marginTop: "3rem" }}>
