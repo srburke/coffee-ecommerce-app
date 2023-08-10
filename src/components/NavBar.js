@@ -9,7 +9,7 @@ import Cart from './Cart.js'
 
 
 
-const NavBar = (GetCurrentUser) => {
+const NavBar = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);

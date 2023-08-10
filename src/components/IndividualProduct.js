@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
 
-const IndividualProduct = () => {
+const IndividualProduct = (props) => {
     const [successMsg, setSuccessMsg] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
     const { type, id } = useParams()

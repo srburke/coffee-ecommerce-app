@@ -51,9 +51,9 @@ const Cart = () => {
         getCart();
     }
 
-    function getData(id) {
-        let productData = cartProducts.find(product => product.id === id);
-    }
+    // function getData(id) {
+    //     let productData = cartProducts.find(product => product.id === id);
+    // }
 
     function getTotalCost() {
         let totalCost = 0;

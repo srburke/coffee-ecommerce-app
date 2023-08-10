@@ -1,32 +1,14 @@
 import React from 'react'
 import '../styles/home.css';
 import { Card, Button, Form, Row, Col } from 'react-bootstrap';
+import ProductCard from './ProductCard';
 import Coffee from './Coffee';
 import { useEffect, useState } from 'react';
 import { collection, query, doc, getDocs, getDoc, where, addDoc } from "firebase/firestore";
 import { db, auth } from "../config/firebase";
+import { useParams } from 'react-router-dom';
 
-const Home = (props) => {
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        const getProducts = () => {
-            const productsArray = [];
-            const path = `products-${props.type.toUpperCase()}`;
-
-            getDocs(collection(db, path)).then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    productsArray.push({ ...doc.data(), id: doc.id })
-                    console.log(doc.id, " => ", doc.data());
-                })
-                setProducts(productsArray);
-            }).catch((error) => {
-                console.log(error.message);
-            });
-        }
-        getProducts();
-    }, [])
-
+const Home = () => {
 
     return (
         <>
@@ -66,8 +48,46 @@ const Home = (props) => {
                 </section>
 
                 <section style={{ marginBottom: "3em" }}>
-                    <h1 className="text-lg-start text-md-center text-sm-center type-title" style={{ color: "#ffffff" }}>Medium <br /> </h1>
-                    <Coffee products={products} />
+                    <div className="row justify-content-center">
+                        <div class="col-8">
+                            <a href='/coffee-type/light' className="nav-link" id='link'>
+                                <h1 className="text-lg-start text-md-center text-sm-center type-title" style={{ color: "black" }}>Light <br /> </h1></a>
+
+                        </div>
+                        <div className="row justify-content-center g-2 ms-4">
+                            <div class="col-6">
+                                <a href='/coffee-type/medium' className="nav-link" id='link'>
+                                    <h1 className="text-lg-start text-md-center text-sm-center type-title" style={{ color: "black" }}>Medium <br /> </h1></a>
+
+                            </div>
+                        </div>
+                        <div className="row justify-content-center g-4 ms-4">
+                            <div class="col-2">
+                                <a href='/coffee-type/dark' className="nav-link" id='link'>
+                                    <h1 className="text-lg-start text-md-center text-sm-center type-title" style={{ color: "black" }}>Dark<br /> </h1></a>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    {/* <div className='container'>
+                        <Row xs={1} md={3} className="g-4" id="coffeeRow">
+                            {products.map((product) => (
+                                <Col align="center">
+                                    <ProductCard
+                                        key={product.id}
+                                        product={product}
+
+                                    />
+                                </Col>
+                            ))}
+
+                        </Row>
+                    </div> */}
                 </section>
             </main>
 
