@@ -11,21 +11,27 @@ const ProductCard = ({ product }) => {
     return (
         <>
 
-            <Card>
-                <Card.Body>
-                    <Link to={`/product/${product.roastLevel}/${product.id}`}><Card.Img variant="top" src={product.productImg} className="images" /></Link>
-                    <Card.Title>{product.companyName} - {product.productName}</Card.Title>
-                    <Card.Text>${product.productPrice}</Card.Text>
-
-                    <Link to={`/product/${product.roastLevel}/${product.id}`}><Button variant="primary">Details</Button></Link>
-                    {/* <Button data-bs-toggle="modal"
-                        data-bs-target="#cartModal" style={{ background: "#191970", borderColor: "#191970" }} onClick={addToCart}>Add to Cart</Button> */}
-
-
-                </Card.Body>
-
-
-            </Card >
+            <section className="container">
+                <div className="card_container">
+                    <div class="card_content">
+                        <div>
+                            <article className="card-article">
+                                <div className="card-image">
+                                    <Link to={`/product/${product.roastLevel}/${product.id}`}><img variant="top" src={product.productImg} className="card-img" /></Link>
+                                    <div className="card-shadow"></div>
+                                </div>
+                                <div className="card-data">
+                                    <div className="card-title">{product.companyName} - {product.productName}</div>
+                                    <div className="card-text">${product.productPrice}</div>
+                                </div>
+                                <Link to={`/product/${product.roastLevel}/${product.id}`}><Button variant="primary">Details</Button></Link>
+                                {/* <Button data-bs-toggle="modal"
+                    data-bs-target="#cartModal" style={{ background: "#191970", borderColor: "#191970" }} onClick={() => addToCart(product)}>Add to Cart</Button> */}
+                            </article>
+                        </div>
+                    </div>
+                </div >
+            </section>
         </>
 
     )
