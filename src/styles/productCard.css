@@ -1,44 +1,50 @@
 .card_container {
-    padding-block: 5rem;
+    padding-block: 1.5rem;
+
 }
 
 .card_content {
-    width: 300px;
+    width: 350px;
     border-radius: 1.25rem;
     overflow: hidden;
 }
 
 .card-article {
-    width: 300px;
-    border-radius: 1.25rem;
-    overflow: hidden;
+    margin: 0 auto;
 }
+
 
 .card-image {
     position: relative;
-    background-color: hsla(23, 39%, 9%, 1);
-    /* max-height: fit-content;
-    max-width: 300px; */
+    background-color: rgb(75, 68, 64);
     padding-top: 1.5rem;
     margin-bottom: -.75rem;
 }
 
 .card-data {
-    background-color: #f4e6cc;
-    padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    text-align: center;
+    background-color: rgb(75, 68, 64);
+    padding: 1rem 2rem;
+    color: #ffffff;
+    text-align: start;
     position: relative;
     font-weight: 600;
-    z-index: 10;
+}
+
+.card-text {
+    position: relative;
+    text-align: start;
+    color: #c7c5c5;
+    padding: 0 2rem;
+    font-weight: 400;
+
 }
 
 .card-img {
-    width: 250px;
-    margin: 0 auto;
+    max-height: 250px;
+    max-width: 250px;
+    object-fit: cover;
     position: relative;
     z-index: 5;
-
 }
 
 

@@ -53,39 +53,27 @@ const Coffee = (props) => {
         getProducts();
     }, [])
 
-    // const addToCart = (product) => {
-    //     setCartItems((prevItems) => {
-    //         const existingItem = prevItems.find((item) => item.product.id === product.id);
-
-    //         if (existingItem) {
-    //             const updatedItems = prevItems.map((item) =>
-    //                 item.product.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-    //             );
-    //             return updatedItems;
-    //         } else {
-    //             return [...prevItems, { product, quantity: 1 }];
-    //         }
-    //     })
-    // }
-
     return (
         <>
-            <div className="container">
-                <Row xs={1} md={3} className="g-4" id="coffeeRow">
-                    {products.map((product) => (
-                        <Col align="center">
-                            <ProductCard
-                                key={product.id}
-                                product={product}
-                            // addToCart={addToCart}
+            <div className='coffee-bg'>
+                <div className="container text-center">
+                    <div className="row justify-content-center align-self-center" id="coffeeRow">
+                        {products.map((product) => (
+                            <div className="col-lg-4 col-md-6 col-sm-8">
+                                <ProductCard
+                                    key={product.id}
+                                    product={product}
+                                // addToCart={addToCart}
 
-                            />
-                        </Col>
-                    ))}
+                                />
+                            </div>
 
-                </Row>
+                        ))}
+
+                    </div>
 
 
+                </div>
             </div>
 
         </>
