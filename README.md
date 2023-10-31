@@ -1,7 +1,11 @@
-#Home Page
-
+# Home Page
 
 https://github.com/srburke/coffee-ecommerce-app/assets/15665394/1fb8eccb-169b-4656-88ed-c19e63604f9f
+
+# Light Roast Page
+
+
+https://github.com/srburke/coffee-ecommerce-app/assets/15665394/cf2a70e5-6584-460c-8082-b071287e4e14
 
 
 
