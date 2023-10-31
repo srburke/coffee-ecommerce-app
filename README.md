@@ -1,5 +1,5 @@
 # Todo's
-- Fix the padding/add margin to the detail page so there is space between the navbar and coffee content and space between the footer and coffee content. 
+- Fix the padding/margin to the detail page so there is space between the navbar and coffee content and space between the footer and coffee content. 
 - Edit the footer so it's not as generic and barebone (was good for presenting the project but should be finished)
 - Fix product image sizing on the detail page so it's less blurred.
 
