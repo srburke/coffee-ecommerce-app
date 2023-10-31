@@ -1,3 +1,10 @@
+#Home Page
+
+
+https://github.com/srburke/coffee-ecommerce-app/assets/15665394/1fb8eccb-169b-4656-88ed-c19e63604f9f
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
