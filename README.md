@@ -2,6 +2,7 @@
 - Fix the padding/margin to the detail page so there is space between the navbar and coffee content and space between the footer and coffee content. 
 - Edit the footer so it's not as generic and barebone (was good for presenting the project but should be finished)
 - Fix product image sizing on the detail page so it's less blurred.
+- Fix Add To Cart button color to match green on home page.
 
 # Home Page
 
