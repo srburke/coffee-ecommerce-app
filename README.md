@@ -7,6 +7,13 @@ https://github.com/srburke/coffee-ecommerce-app/assets/15665394/1fb8eccb-169b-46
 
 https://github.com/srburke/coffee-ecommerce-app/assets/15665394/cf2a70e5-6584-460c-8082-b071287e4e14
 
+# Detail Page & Cart Functionality
+
+
+
+https://github.com/srburke/coffee-ecommerce-app/assets/15665394/4cd5d7ae-94f0-42c9-930c-46e846e96d06
+
+
 
 
 # Getting Started with Create React App
