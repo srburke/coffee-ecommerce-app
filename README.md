@@ -13,8 +13,10 @@ https://github.com/srburke/coffee-ecommerce-app/assets/15665394/cf2a70e5-6584-46
 
 https://github.com/srburke/coffee-ecommerce-app/assets/15665394/4cd5d7ae-94f0-42c9-930c-46e846e96d06
 
-
-
+#Todo's
+- Fix the padding/add margin to the detail page so there is space between the navbar and coffee content and space between the footer and coffee content. 
+- Edit the footer so it's not as generic and barebone (was good for presenting the project but should be finished)
+- Fix product image sizing on the detail page so it's less blurred.
 
 # Getting Started with Create React App
 
