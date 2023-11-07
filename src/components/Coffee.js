@@ -56,15 +56,13 @@ const Coffee = (props) => {
     return (
         <>
             <div className='coffee-bg'>
-                <div className="container text-center">
-                    <div className="row justify-content-center align-self-center" id="coffeeRow">
+                <div className="container text-center" style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
+                    <div className="row justify-content-center align-self-center" id="coffeeRow" style={{ paddingBottom: "2rem" }}>
                         {products.map((product) => (
                             <div className="col-lg-4 col-md-6 col-sm-8">
                                 <ProductCard
                                     key={product.id}
                                     product={product}
-                                // addToCart={addToCart}
-
                                 />
                             </div>
 
@@ -80,19 +78,3 @@ const Coffee = (props) => {
     )
 }
 export default Coffee;
-
-
-
-
-
-
-{/* <ProductCard /> */ }
-
-
-{/* <Row xs={1} md={3} className="g-4" id="coffeeRow">
-                    {productsArray.map((product, idx) => (
-                        <Col align="center" key={idx}>
-                            <ProductCard product={product} />
-                        </Col>
-                    ))}
-                </Row> */}

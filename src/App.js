@@ -54,6 +54,7 @@ function App() {
         <Route exact path='/addproduct' element={<AddProduct />} />
         <Route path='/product/:type/:id' element={<IndividualProduct />} />
       </Routes>
+      <Footer />
     </>
 
 
