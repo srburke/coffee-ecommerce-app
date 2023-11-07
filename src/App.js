@@ -48,11 +48,11 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route path='/coffee-ecommerce-app' element={<Home loggeduser={loggeduser} />} />
-        <Route path='/coffee-ecommerce-app/coffee-type/light' element={<Coffee type={'Light'} />} />
-        <Route path='/coffee-ecommerce-app/coffee-type/medium' element={<Coffee type={'Medium'} />} />
-        <Route path='/coffee-ecommerce-app/coffee-type/dark' element={<Coffee type={'Dark'} />} />
-        <Route path='/coffee-ecommerce-app/addproduct' element={<AddProduct />} />
+        <Route path='/' element={<Home loggeduser={loggeduser} />} />
+        <Route path='/coffee-type/light' element={<Coffee type={'Light'} />} />
+        <Route path='/coffee-type/medium' element={<Coffee type={'Medium'} />} />
+        <Route path='/coffee-type/dark' element={<Coffee type={'Dark'} />} />
+        <Route path='/addproduct' element={<AddProduct />} />
         <Route path='/product/:type/:id' element={<IndividualProduct />} />
       </Routes>
 
