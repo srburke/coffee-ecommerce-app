@@ -50,10 +50,10 @@ function App() {
 
       <Routes>
         <Route path='/coffee-ecommerce-app' element={<Home loggeduser={loggeduser} />} />
-        <Route path='/coffee-type/light' element={<Coffee type={'Light'} />} />
-        <Route path='/coffee-type/medium' element={<Coffee type={'Medium'} />} />
-        <Route path='/coffee-type/dark' element={<Coffee type={'Dark'} />} />
-        <Route path='/addproduct' element={<AddProduct />} />
+        <Route path='/coffee-ecommerce-app/light' element={<Coffee type={'Light'} />} />
+        <Route path='/coffee-ecommerce-app/medium' element={<Coffee type={'Medium'} />} />
+        <Route path='/coffee-ecommerce-app/dark' element={<Coffee type={'Dark'} />} />
+        <Route path='/coffee-ecommerce-app/addproduct' element={<AddProduct />} />
         <Route path='/product/:type/:id' element={<IndividualProduct />} />
       </Routes>
 
