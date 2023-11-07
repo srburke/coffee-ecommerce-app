@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/coffee-ecommerce-app/static/css/main.51d627c9.css",
-    "main.js": "/coffee-ecommerce-app/static/js/main.72da0c3d.js",
+    "main.js": "/coffee-ecommerce-app/static/js/main.f98fcae4.js",
     "index.html": "/coffee-ecommerce-app/index.html",
     "main.51d627c9.css.map": "/coffee-ecommerce-app/static/css/main.51d627c9.css.map",
-    "main.72da0c3d.js.map": "/coffee-ecommerce-app/static/js/main.72da0c3d.js.map"
+    "main.f98fcae4.js.map": "/coffee-ecommerce-app/static/js/main.f98fcae4.js.map"
   },
   "entrypoints": [
     "static/css/main.51d627c9.css",
-    "static/js/main.72da0c3d.js"
+    "static/js/main.f98fcae4.js"
   ]
 }
