@@ -1,10 +1,9 @@
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Coffee from './components/Coffee';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { auth, db } from './config/firebase';
 import { collection, query, doc, getDocs, getDoc, where, addDoc } from "firebase/firestore";
-import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddProduct from './components/AddProduct';
@@ -45,20 +44,20 @@ function App() {
 
   return (
 
-    <>
+    <HashRouter>
       <NavBar />
 
       <Routes>
-        <Route path='/coffee-ecommerce-app' element={<Home loggeduser={loggeduser} />} />
-        <Route path='/coffee-ecommerce-app/light' element={<Coffee type={'Light'} />} />
-        <Route path='/coffee-ecommerce-app/medium' element={<Coffee type={'Medium'} />} />
-        <Route path='/coffee-ecommerce-app/dark' element={<Coffee type={'Dark'} />} />
-        <Route path='/coffee-ecommerce-app/addproduct' element={<AddProduct />} />
+        <Route path='/' element={<Home loggeduser={loggeduser} />} />
+        <Route path='/coffee-type/light' element={<Coffee type={'Light'} />} />
+        <Route path='/coffee-type/medium' element={<Coffee type={'Medium'} />} />
+        <Route path='/coffee-type/dark' element={<Coffee type={'Dark'} />} />
+        <Route path='/addproduct' element={<AddProduct />} />
         <Route path='/product/:type/:id' element={<IndividualProduct />} />
       </Routes>
 
       <Footer />
-    </>
+    </HashRouter>
 
 
   );
