@@ -30,7 +30,7 @@ const NavBar = (props) => {
                     <div className="collapse navbar-collapse flex-grow-1" id="collapsibleNavId">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                                <Link to='/#' id="link" className="nav-link" aria-current="page">Home<span
+                                <Link to='/' id="link" className="nav-link" aria-current="page">Home<span
                                     className="visually-hidden">(current)</span></Link>
                             </li>
                             <li class="nav-item dropdown" id="link">
@@ -38,9 +38,9 @@ const NavBar = (props) => {
                                     Coffee Bags
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a href='#/coffee-light/light' className="nav-link" id='link'>Light Roast</a></li>
-                                    <li><a href='#/coffee-ecommerce-app/medium' className="nav-link" id="link">Medium Roast</a></li>
-                                    <li><a href='#/coffee-ecommerce-app/dark' className="nav-link" id="link">Dark Roast</a></li>
+                                    <li><a href='/coffee-light/light' className="nav-link" id='link'>Light Roast</a></li>
+                                    <li><a href='/coffee-ecommerce-app/medium' className="nav-link" id="link">Medium Roast</a></li>
+                                    <li><a href='/coffee-ecommerce-app/dark' className="nav-link" id="link">Dark Roast</a></li>
                                 </ul>
                             </li>
 

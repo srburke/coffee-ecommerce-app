@@ -62,7 +62,7 @@ const Home = () => {
 
                                 <div className="col">
                                     <div className="roast-container">
-                                        <button className="roast-button" id="roast-text">    <a href='/coffee-ecommerce-app/light' className="nav-link" >
+                                        <button className="roast-button" id="roast-text">    <a href='/coffee-type/light' className="nav-link" >
                                         </a>Light</button>
 
 
@@ -75,7 +75,7 @@ const Home = () => {
 
                                 <div className="col">
                                     <div className="roast-container">
-                                        <button className="roast-button" id="roast-text">    <a href='/coffee-ecommerce-app/medium' className="nav-link" >
+                                        <button className="roast-button" id="roast-text">    <a href='/coffee-type/medium' className="nav-link" >
                                         </a>Medium</button>
 
                                         <img src="./images/banner-1.jpg" alt="Coffee Photo" id="banner" />
@@ -85,7 +85,7 @@ const Home = () => {
 
                                 <div className="col">
                                     <div className="roast-container">
-                                        <button className="roast-button" id="roast-text">    <a href='/coffee-ecommerce-app/dark' className="nav-link" >
+                                        <button className="roast-button" id="roast-text">    <a href='/coffee-type/dark' className="nav-link" >
                                         </a>Dark</button>
 
                                         <img src="./images/banner-1.jpg" alt="Coffee Photo" id="banner" />
