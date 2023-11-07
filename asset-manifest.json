@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/srburke/coffee-ecommerce-app/static/css/main.51d627c9.css",
-    "main.js": "/srburke/coffee-ecommerce-app/static/js/main.47b4ff5d.js",
-    "index.html": "/srburke/coffee-ecommerce-app/index.html",
-    "main.51d627c9.css.map": "/srburke/coffee-ecommerce-app/static/css/main.51d627c9.css.map",
-    "main.47b4ff5d.js.map": "/srburke/coffee-ecommerce-app/static/js/main.47b4ff5d.js.map"
+    "main.css": "/coffee-ecommerce-app/static/css/main.51d627c9.css",
+    "main.js": "/coffee-ecommerce-app/static/js/main.05b0e9da.js",
+    "index.html": "/coffee-ecommerce-app/index.html",
+    "main.51d627c9.css.map": "/coffee-ecommerce-app/static/css/main.51d627c9.css.map",
+    "main.05b0e9da.js.map": "/coffee-ecommerce-app/static/js/main.05b0e9da.js.map"
   },
   "entrypoints": [
     "static/css/main.51d627c9.css",
-    "static/js/main.47b4ff5d.js"
+    "static/js/main.05b0e9da.js"
   ]
 }
