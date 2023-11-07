@@ -30,7 +30,7 @@ const NavBar = (props) => {
                     <div className="collapse navbar-collapse flex-grow-1" id="collapsibleNavId">
                         <ul className="navbar-nav mx-auto">
                             <li className="nav-item">
-                                <Link to='/' id="link" className="nav-link" aria-current="page">Home<span
+                                <Link to='/coffee-type/light' id="link" className="nav-link" aria-current="page">Home<span
                                     className="visually-hidden">(current)</span></Link>
                             </li>
                             <li class="nav-item dropdown" id="link">
