@@ -48,10 +48,10 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path='/' element={<Home loggeduser={loggeduser} />} />
-        <Route path='/coffee-type/light' element={<Coffee type={'Light'} />} />
-        <Route path='/coffee-type/medium' element={<Coffee type={'Medium'} />} />
-        <Route path='/coffee-type/dark' element={<Coffee type={'Dark'} />} />
-        <Route path='/addproduct' element={<AddProduct />} />
+        <Route exact path='/coffee-type/light' element={<Coffee type={'Light'} />} />
+        <Route exact path='/coffee-type/medium' element={<Coffee type={'Medium'} />} />
+        <Route exact path='/coffee-type/dark' element={<Coffee type={'Dark'} />} />
+        <Route exact path='/addproduct' element={<AddProduct />} />
         <Route path='/product/:type/:id' element={<IndividualProduct />} />
       </Routes>
     </>
