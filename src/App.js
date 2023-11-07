@@ -1,7 +1,7 @@
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Coffee from './components/Coffee';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, BrowserRouter } from 'react-router-dom';
 import { auth, db } from './config/firebase';
 import { collection, query, doc, getDocs, getDoc, where, addDoc } from "firebase/firestore";
 import { useEffect, useState } from 'react'
@@ -44,7 +44,7 @@ function App() {
 
   return (
 
-    <HashRouter>
+    <BrowserRouter>
       <NavBar />
 
       <Routes>
@@ -57,7 +57,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </HashRouter>
+    </BrowserRouter>
 
 
   );
