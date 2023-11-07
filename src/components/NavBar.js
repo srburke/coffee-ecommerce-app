@@ -38,9 +38,9 @@ const NavBar = (props) => {
                                     Coffee Bags
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a href='/coffee-ecommerce-app/coffee-light/light' className="nav-link" id='link'>Light Roast</a></li>
-                                    <li><a href='/coffee-ecommerce-app/coffee-type/medium' className="nav-link" id="link">Medium Roast</a></li>
-                                    <li><a href='/coffee-ecommerce-app/coffee-type/dark' className="nav-link" id="link">Dark Roast</a></li>
+                                    <li><a href='/coffee-ecommerce-app' className="nav-link" id='link'>Light Roast</a></li>
+                                    <li><a href='/coffee-ecommerce-app' className="nav-link" id="link">Medium Roast</a></li>
+                                    <li><a href='/coffee-ecommerce-app' className="nav-link" id="link">Dark Roast</a></li>
                                 </ul>
                             </li>
 
