@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AddProduct from './components/AddProduct';
 import IndividualProduct from './components/IndividualProduct';
 import Footer from './components/Footer';
+import { render } from '@testing-library/react';
 
 function App() {
 
@@ -42,15 +43,13 @@ function App() {
 
 
 
-
-
   return (
 
     <>
       <NavBar />
 
       <Routes>
-        <Route path='/' element={<Home loggeduser={loggeduser} />} />
+        <Route path='/coffee-ecommerce-app/home' element={<Home loggeduser={loggeduser} />} />
         <Route path='/coffee-type/light' element={<Coffee type={'Light'} />} />
         <Route path='/coffee-type/medium' element={<Coffee type={'Medium'} />} />
         <Route path='/coffee-type/dark' element={<Coffee type={'Dark'} />} />
