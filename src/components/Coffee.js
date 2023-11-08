@@ -12,7 +12,6 @@ import { db, auth } from "../config/firebase";
 const Coffee = (props) => {
 
     const [products, setProducts] = useState([]);
-    const [cartItems, setCartItems] = useState([]);
 
     function GetCurrentUser() {
         const [user, setUser] = useState('');
@@ -36,32 +35,46 @@ const Coffee = (props) => {
     const loggeduser = GetCurrentUser();
 
     useEffect(() => {
+        // getProducts function to retrieve products from the db
         const getProducts = () => {
+            // Initialize an array to store the retrieved products
             const productsArray = [];
+            // Construct the Firestore collection path absed on the 'type' prop (light, medium, dark)
             const path = `products-${props.type.toUpperCase()}`;
 
+            // Fetch documents from the specifed Firestore collection
             getDocs(collection(db, path)).then((querySnapshot) => {
+                // Loop through the retrieved documents
                 querySnapshot.forEach((doc) => {
+                    // Create an object representing the product data and include its Firestore ID
                     productsArray.push({ ...doc.data(), id: doc.id })
+                    // Log the Firestore document ID and its data to the console (for debugging)
                     console.log(doc.id, " => ", doc.data());
                 })
+
+                // Update the state with the fetched products
                 setProducts(productsArray);
             }).catch((error) => {
+                // Handle any errors that may occur during the Firestore fetch
                 console.log(error.message);
             });
         }
+        // Call the 'getProducts' function when the component is mounted
         getProducts();
-    }, [])
+    }, []) // Empty dependency array ensures this effect runs only once when the component mounts.
 
     return (
         <>
             <div className='coffee-bg'>
                 <div className="container text-center" style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
                     <div className="row justify-content-center align-self-center" id="coffeeRow" style={{ paddingBottom: "2rem" }}>
+                        // For each product in the products array, render the following block
                         {products.map((product) => (
                             <div className="col-lg-4 col-md-6 col-sm-8">
                                 <ProductCard
+                                    // Key prop to unique identifier
                                     key={product.id}
+                                    // Pass the product data asa prop to the ProductCard component
                                     product={product}
                                 />
                             </div>

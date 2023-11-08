@@ -1,19 +1,12 @@
 import React from 'react'
 import '../styles/navbar.css';
 import Account from './Account.js';
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Button, container, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Cart from './Cart.js'
 
 
 
 const NavBar = (props) => {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-
 
     return (
         <>
