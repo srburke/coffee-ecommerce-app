@@ -4,6 +4,7 @@ import { ref, getDownloadURL, uploadBytes } from "firebase/storage"
 import { addDoc, collection } from 'firebase/firestore'
 
 const AddProduct = () => {
+    // Define state variables for various product details and form handling
     const [productName, setProductName] = useState('');
     const [beanType, setBeanType] = useState('');
     const [roastLevel, setRoastLevel] = useState('');
@@ -14,6 +15,7 @@ const AddProduct = () => {
     const [error, setError] = useState('');
     const types = ['image/png', 'image/jpeg']
 
+    // Handle product image input
     const productImgHandler = (e) => {
         let selectedFile = e.target.files[0];
         if (selectedFile && types.includes(selectedFile.type)) {
@@ -25,15 +27,20 @@ const AddProduct = () => {
         }
 
     }
+    
+    // Function to add a new product
     const addProduct = (e) => {
         e.preventDefault();
         // console.log(productname, productPrice, productImg);
 
         const storageRef = ref(storage, `product-images${roastLevel.toUpperCase()}/${Date.now()}`);
 
+        // Upload the product image to Firebase storage
         uploadBytes(storageRef, productImg)
             .then(() => {
+                // Get the download URL of the uploaded image
                 getDownloadURL(storageRef).then(url => {
+                    // Add the product details to the Firestore database
                     addDoc(collection(db, `products-${roastLevel.toUpperCase()}`), {
                         companyName,
                         productName,

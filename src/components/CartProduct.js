@@ -5,17 +5,23 @@ import { doc, updateDoc, deleteDoc } from "firebase/firestore";
 // import { getProductData } from './productsStore';
 
 export const CartProduct = ({ cartProduct, userid }) => {
-
+    // Extract quantity and initialize state for product quantity
     const [productQty, setProductQty] = useState(cartProduct.quantity);
 
+    // Get the price of the product
     let price = cartProduct.currentProd.productPrice;
 
+    // Calculate the exact price by multiplying the price with the product quantity
     const exactPrice = price * productQty
 
+    // Function to handle incrementing the product quantity
     const handleIncrement = async () => {
         setProductQty(productQty + 1);
 
+        //Get a reference to the product in the Firestore database
         const prodRef = doc(db, `cart-${userid}`, `${cartProduct.id}`)
+        
+        // Update the quantity in the Firestore document
         await updateDoc(prodRef, {
             quantity: productQty + 1
         }).then(() => {
@@ -24,11 +30,16 @@ export const CartProduct = ({ cartProduct, userid }) => {
         // console.log(prodRef)
     }
 
+    // Function to handle decrementing the product quantity
     const handleDecrement = async () => {
 
         if (productQty >= 1) {
             setProductQty(productQty - 1);
+            
+            // Get a reference to the prpduct in the Firestore database
             const prodRef = doc(db, `cart-${userid}`, `${cartProduct.id}`)
+            
+            // Update the quantity in the Firestore document
             await updateDoc(prodRef, {
                 quantity: productQty - 1
             }).then(() => {
@@ -39,7 +50,9 @@ export const CartProduct = ({ cartProduct, userid }) => {
 
     }
 
+    // Function to handle removing the product from the cart
     const handleRemove = async () => {
+        // Delete the document from Firestore database
         await deleteDoc(doc(db, `cart-${userid}`, `${cartProduct.id}`)).then(() => {
             console.log('Doc removed');
         })
@@ -75,26 +88,12 @@ export const CartProduct = ({ cartProduct, userid }) => {
                 </>
                 :
                 // <Button variant="primary" onClick={() => cart.addOneToCart(id)}>Add to Cart</Button>
-                <p></p>
+                <p></p> // If the quantity is 0, display an empty paragraph
             }
 
             <hr></hr>
         </div >
     )
-
-    //  <h5>Subtotal (): {cart.getTotalCost().toFixed(2)}</h5>
-    //  <Button variant="success">
-    //      Purchase items!
-    //  </Button>
-
-    // <div className="container">
-    //     <h4>{productData.title}</h4>
-    //     <h5>{quantity} total</h5>
-    //     <h5>${(quantity * productData.price).toFixed(2)}</h5>
-
-    //     <Button className="w-50" style={{ marginTop: "1rem", marginLeft: "5rem" }} onClick={() => cart.deleteFromCart(id)}>Remove</Button>
-    //     <hr></hr>
-    // </div>
 
 }
 

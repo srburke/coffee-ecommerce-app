@@ -74,7 +74,7 @@ const Coffee = (props) => {
                                 <ProductCard
                                     // Key prop to unique identifier
                                     key={product.id}
-                                    // Pass the product data asa prop to the ProductCard component
+                                    // Pass the product data as a prop to the ProductCard component
                                     product={product}
                                 />
                             </div>
